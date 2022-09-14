@@ -1,21 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from .models import *
 
 # Create your views here.
-def doat(request):
-    
-    return render(request, 'doat.html', )
+def Doat(request):
+    doats = doat.objects.all()
+    context = {'doats': doats}
+    return render(request, 'doat.html', context)
 
 
-def ditt(request):
-    
-    return render(request, 'ditt.html', )
+def Ditt(request):
+    ditts = ditt.objects.all()
+    context = {'ditts': ditts}
+    return render(request, 'ditt.html', context)
 
 
-def doim(request):
-    
-    return render(request, 'doim.html', )
+def Doim(request):
+    doims = doim.objects.all()
+    context = {'doims': doims}
+    return render(request, 'doim.html', context)
 
 
-def rsta(request):
-    
-    return render(request, 'rsta.html', )
+def Rsta(request):
+    rstas = rsta.objects.all()
+    context = {'rstas': rstas}
+    return render(request, 'rsta.html', context)

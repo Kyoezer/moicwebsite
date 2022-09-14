@@ -1,7 +1,7 @@
 from pyexpat import model
 from django.contrib import admin
 
-from indexapp.models import IpModel, post,  Category, Tag, profile, vacancie, event, PressRelease, information_and_download, tender
+from indexapp.models import IpModel, post,  Category, Tag, profile, vacancie, event, PressRelease, information_and_download, tender, media
 admin.site.site_header = "MOIC Admin"
 admin.site.site_title = "MOIC Admin Portal"
 admin.site.index_title = "Welcome to MOIC Dashboard "
@@ -41,4 +41,11 @@ class TenderAdmin(admin.ModelAdmin):
 
 admin.site.register(tender, TenderAdmin)
 admin.site.register(IpModel)
+
+
+class MediaAdmin(admin.ModelAdmin):
+    list_display = ('media_files',)
+
+
+admin.site.register(media, MediaAdmin)
 

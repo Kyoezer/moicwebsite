@@ -147,6 +147,11 @@ class tender(models.Model):
     tender_file = models.FileField(blank=True, null=True, upload_to='files')
 
 
+class media(models.Model):
+    media_files = models.FileField(blank=True, null=True, upload_to='files')
+
+
+
 # PRESS RELEASE
 class PressRelease(models.Model):
     press_title = models.CharField(max_length=100)

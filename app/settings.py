@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8_32xf5%=&s^bz9hpc*_j9n2)kgpjs7!+(v@&m*yasg@cxrdrb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['172.30.3.119']
+ALLOWED_HOSTS = ['172.16.165.181']
 
 
 # Application definition
@@ -140,9 +140,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'admin@moic.gov.bt' #Enter your email
-EMAIL_HOST_PASSWORD = 'zcwjusorvzyvlxuw' #Enter the password to the email
+EMAIL_HOST_PASSWORD = 'cogsjnljfjapvgff' #Enter the password to the email
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'assets')
 ]
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

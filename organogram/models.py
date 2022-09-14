@@ -21,3 +21,13 @@ class organogram(models.Model):
 class information_download(models.Model):
     title = models.CharField(max_length=200, blank=True)
     download_link = models.CharField(max_length=400)
+
+
+class ministry_strength(models.Model):
+    year = models.CharField(max_length=20, blank=True)
+    total = models.CharField(max_length=20, blank=True)
+    executives = models.CharField(max_length=20, blank=True)
+    pro_and_mgmt = models.CharField(max_length=20, blank=True)
+    support = models.CharField(max_length=20, blank=True)
+    operational = models.CharField(max_length=20, blank=True)
+

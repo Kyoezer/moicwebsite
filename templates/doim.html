@@ -96,17 +96,17 @@
                         <hr class="line">
                         <div class="vision">
                             <div class="director">
-                                <img
-                                    alt="background image"
-                                    src="{% static 'images/Doim.jpg' %}"
-                                    style="width: auto; padding-right: 40px; height:150px"
-                            />
-                                <p style="padding:1px">Monira A Y Tsewang<br>
-                                Offgt. Director <br>
-                                     monira@doim.gov.bt<br>
-                                    Phone No : 02-321093
-
-</p>
+<!--                                <img-->
+<!--                                    alt="background image"-->
+<!--                                    src="{% static 'images/Doim.jpg' %}"-->
+<!--                                    style="width: auto; padding-right: 40px; height:150px"-->
+<!--                            />-->
+                                {% for n in doims %}
+                                <p style="padding:1px">Mr. {{ n.directorName }}<br>
+                                {{ n.directorPost }} <br>
+                                    Email: {{ n.directorMail }} <br>
+                                    Phone No : {{ n.directorPhoneNumber }}</p>
+                                {% endfor %}
                             </div>
                             <br>
                             <p>
@@ -156,113 +156,44 @@
                         </div>
                         <hr class="line">
                         <div class="vision">
-                            <p class="sub_topic1">DOIM Human Resource Strength:10</p>
+                            {% for n in doims %}
+                            <p class="sub_topic1">DOIM Human Resource Strength as of {{ n.year }}:10</p>
+                            {% endfor %}
                             <section>
-                                <div class="flex flex-wrap overflow-hidden">
+                                                                <div class="flex flex-wrap overflow-hidden">
                                     <div class="w-1/2 overflow-hidden">
-                                        <section>
-                                            <div class="rt-container">
-                                                <div class="col-rt-12">
-                                                    <div class="Scriptcontent">
-                                                        <!-- partial:index.partial.html -->
-                                                        <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                                class="numbers__window__digit numbers__window__digit--1"
-                                data-fake="8642519073"
-                                style="font-weight: bold"
-                        >1</span
-                        >
-                      </span>
-                                                            <br/>
-                                                            <span class="text-2">Executives</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                        <p class="text-center">{% for s in doims %}
+                      <span class="text-4xl font-bold p-5">{{ s.executives }}</span>
+                      {% endfor %}<br>
+            Executives
+            </p>
                                     </div>
 
                                     <div class="w-1/2 overflow-hidden">
-                                        <section>
-                                            <div class="rt-container">
-                                                <div class="col-rt-12">
-                                                    <div class="Scriptcontent">
-                                                        <!-- partial:index.partial.html -->
-                                                        <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                                class="numbers__window__digit numbers__window__digit--1"
-                                data-fake="8642519073"
-                                style="font-weight: bold"
-                        >5</span
-                        >
-                      </span>
-                                                            <br/>
-                                                            <span class="text-2">Professional & Management</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                        <p class="text-center">{% for s in doims %}
+                      <span class="text-4xl font-bold p-5">{{ s.pro_and_mgmt }}</span>
+                      {% endfor %}<br>
+            Professional and Management
+            </p>
                                     </div>
 
                                     <div class="w-1/2 overflow-hidden">
-                                        <section>
-                                            <div class="rt-container">
-                                                <div class="col-rt-12">
-                                                    <div class="Scriptcontent">
-                                                        <!-- partial:index.partial.html -->
-                                                        <div class="numbers">
-                                                            <span class="numbers__window">
-                        <span
-                                class="numbers__window__digit numbers__window__digit--3"
-                                data-fake="8395216407"
-                                style="font-weight: bold"
-                        >2</span
-                        >
-                      </span>
-                                                            <br/>
-                                                            <span class="text-2">Supervisory & Support</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                        <p class="text-center">{% for s in doims %}
+                      <span class="text-4xl font-bold p-5">{{ s.support }}</span>
+                      {% endfor %}<br>
+            Supervisory and Support
+            </p>
                                     </div>
 
                                     <div class="w-1/2 overflow-hidden">
-                                        <section>
-                                            <div class="rt-container">
-                                                <div class="col-rt-12">
-                                                    <div class="Scriptcontent">
-                                                        <!-- partial:index.partial.html -->
-                                                        <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                                class="numbers__window__digit numbers__window__digit--1"
-                                data-fake="8642519073"
-                                style="font-weight: bold"
-                        >1</span
-                        >
-                      </span>
-                                                            <span class="numbers__window">
-                        <span
-                                class="numbers__window__digit numbers__window__digit--1"
-                                data-fake="8642519073"
-                                style="font-weight: bold"
-                        >0</span
-                        >
-                      </span>
-                                                            <br/>
-                                                            <span class="text-2">Operational</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+                                        <p class="text-center">{% for s in doims %}
+                      <span class="text-4xl font-bold p-5">{{ s.operational }}</span>
+                      {% endfor %}<br>
+            Operational
+            </p>
                                     </div>
                                 </div>
+
                             </section>
                         </div>
                         <br/>

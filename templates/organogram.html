@@ -63,148 +63,46 @@
   <section class="history">
     <div>
       <p class="topic">organogram</p>
-          <p>The total HR for the Ministry as of July 2021 is………..</p>
+          {% for t in strengths %}
+          <p>The total HR for the Ministry as of {{ t.year }} is………..</p>
+          {% endfor %}
       <hr class="line" />
       <div class="vision">
-      <p class="sub_topic1">Ministry's Human Resource Strength</p>
+        {% for s in strengths %}
+      <p class="sub_topic1">Ministry's Human Resource Strength: {{ s.total }}</p>
+        {% endfor %}
       <section>
         <div class="flex flex-wrap overflow-hidden">
           <div class="w-1/2 overflow-hidden">
-            <section>
-              <div class="rt-container">
-                <div class="col-rt-12">
-                  <div class="Scriptcontent">
-                    <!-- partial:index.partial.html -->
-                    <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--1"
-                          data-fake="8642519073"
-                          style="font-weight: bold"
-                          >5</span
-                        >
-                      </span>
-                      <br />
-                      <span class="text-2">Executives</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <p class="text-center">{% for s in strengths %}
+                      <span class="text-4xl font-bold p-5">{{ s.executives }}</span>
+                      {% endfor %}<br>
+            Executives
+            </p>
           </div>
 
           <div class="w-1/2 overflow-hidden">
-            <section>
-              <div class="rt-container">
-                <div class="col-rt-12">
-                  <div class="Scriptcontent">
-                    <!-- partial:index.partial.html -->
-                    <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--1"
-                          data-fake="8642519073"
-                          style="font-weight: bold"
-                          >1</span
-                        >
-                      </span>
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--3"
-                          data-fake="8395216407"
-                          style="font-weight: bold"
-                          >3</span
-                        >
-                      </span>
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--1"
-                          data-fake="8642519073"
-                          style="font-weight: bold"
-                          >7</span
-                        >
-                      </span>
-                      <br />
-                      <span class="text-2">Professional & Management</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <p class="text-center">{% for s in strengths %}
+                      <span class="text-4xl font-bold p-5">{{ s.pro_and_mgmt }}</span>
+                      {% endfor %}<br>
+            Professional and Management
+            </p>
           </div>
 
-          <div class="w-1/2 overflow-hidden">
-            <section>
-              <div class="rt-container">
-                <div class="col-rt-12">
-                  <div class="Scriptcontent">
-                    <!-- partial:index.partial.html -->
-                    <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--1"
-                          data-fake="8642519073"
-                          style="font-weight: bold"
-                          >3</span
-                        >
-                      </span>
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--3"
-                          data-fake="8395216407"
-                          style="font-weight: bold"
-                          >3</span
-                        >
-                      </span>
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--3"
-                          data-fake="8395216407"
-                          style="font-weight: bold"
-                          >7</span
-                        >
-                      </span>
-                      <br />
-                      <span class="text-2">Supervisory & Support</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+<div class="w-1/2 overflow-hidden">
+          <p class="text-center">{% for s in strengths %}
+                      <span class="text-4xl font-bold p-5">{{ s.support }}</span>
+                      {% endfor %}<br>
+            Supervisory and Support
+            </p>
           </div>
-
-          <div class="w-1/2 overflow-hidden">
-            <section>
-              <div class="rt-container">
-                <div class="col-rt-12">
-                  <div class="Scriptcontent">
-                    <!-- partial:index.partial.html -->
-                    <div class="numbers">
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--1"
-                          data-fake="8642519073"
-                          style="font-weight: bold"
-                          >5</span
-                        >
-                      </span>
-                      <span class="numbers__window">
-                        <span
-                          class="numbers__window__digit numbers__window__digit--3"
-                          data-fake="8395216407"
-                          style="font-weight: bold"
-                          >3</span
-                        >
-                      </span>
-                      <br />
-                      <span class="text-2">Operational</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
+<div class="w-1/2 overflow-hidden">
+          <p class="text-center">{% for s in strengths %}
+                      <span class="text-4xl font-bold p-5">{{ s.operational }}</span>
+                      {% endfor %}<br>
+            Operational
+            </p>
+          </div>        </div>
       </section>
     </div>
       <hr class="line">

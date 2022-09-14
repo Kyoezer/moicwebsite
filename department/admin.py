@@ -1,9 +1,31 @@
 from django.contrib import admin
 
-from department.models import  department_of_air_transport, department_of_it_telecom, department_of_information_and_media, road_safety_and_transport_authority
+from department.models import *
 
-# Register your models here.
-# admin.site.register(department_of_air_transport)
-# admin.site.register(department_of_it_telecom)
-# admin.site.register(department_of_information_and_media)
-# admin.site.register(road_safety_and_transport_authority)
+
+class DoatAdmin(admin.ModelAdmin):
+    list_display = ('directorName', 'directorPost', 'directorMail', 'directorPhoneNumber')
+
+
+admin.site.register(doat, DoatAdmin)
+
+
+class DittAdmin(admin.ModelAdmin):
+    list_display = ('directorName', 'directorPost', 'directorMail', 'directorPhoneNumber')
+
+
+admin.site.register(ditt, DittAdmin)
+
+
+class DoimAdmin(admin.ModelAdmin):
+    list_display = ('directorName', 'directorPost', 'directorMail', 'directorPhoneNumber')
+
+
+admin.site.register(doim, DoimAdmin)
+
+
+class RstaAdmin(admin.ModelAdmin):
+    list_display = ('directorName', 'directorPost', 'directorMail', 'directorPhoneNumber')
+
+
+admin.site.register(rsta, RstaAdmin)

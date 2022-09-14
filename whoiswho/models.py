@@ -16,7 +16,7 @@ class office_of_minister(models.Model):
     name = models.CharField(max_length=200)
     mail_id = models.EmailField(blank=True)
     phone_no = models.IntegerField(blank=True, null=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(blank=True, upload_to='pics')
 
 # OFFICE OF THE SECRETARY
 class office_of_secretary(models.Model):
@@ -33,7 +33,7 @@ class policy_planning_division(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
     # HRD
 class human_resource_division(models.Model):
@@ -42,7 +42,7 @@ class human_resource_division(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
     # ICT
 class ict_division(models.Model):
@@ -51,7 +51,7 @@ class ict_division(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
      # IA
 class internal_audit(models.Model):
@@ -60,7 +60,7 @@ class internal_audit(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
     #adm
 class administration(models.Model):
@@ -69,7 +69,7 @@ class administration(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
     #finance_divison
 class finance_division(models.Model):
@@ -78,7 +78,7 @@ class finance_division(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True,upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
     #procurement_section
 class procurement_section(models.Model):
@@ -87,7 +87,7 @@ class procurement_section(models.Model):
     mail_id = models.EmailField(blank=True)
     focal_person_for = models.CharField(max_length=200, null=True, blank=True)
     phone_no = models.IntegerField(blank=True)
-    profile_img = models.ImageField(blank=True, upload_to='pics')
+    profile_img = models.ImageField(upload_to='pics', blank=True, null=True)
 
 
 # short link
