@@ -145,7 +145,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'admin@moic.gov.bt' #Enter your email
 EMAIL_HOST_PASSWORD = 'cogsjnljfjapvgff' #Enter the password to the email
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets')
+    os.path.join(BASE_DIR, 'static')
 ]
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -158,6 +158,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 from ckeditor.configs import DEFAULT_CONFIG
