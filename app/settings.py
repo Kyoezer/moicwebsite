@@ -27,12 +27,13 @@ SECRET_KEY = 'django-insecure-8_32xf5%=&s^bz9hpc*_j9n2)kgpjs7!+(v@&m*yasg@cxrdrb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.30.3.119']
+ALLOWED_HOSTS = ['172.30.78.23','43.230.208.18','https://www.moic.gov.bt/','www.moic.gov.bt','moic.gov.bt']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    #'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,6 +61,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -144,9 +146,7 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'admin@moic.gov.bt' #Enter your email
 EMAIL_HOST_PASSWORD = 'cogsjnljfjapvgff' #Enter the password to the email
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
